@@ -4,7 +4,7 @@ Devel::Cover::Report::Codecovbash - Generate a JSON file to be uploaded with the
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # DESCRIPTION
 
@@ -14,6 +14,11 @@ uploaded with the bash script provided by codecov. See
 
 The generated file will be named `codecov.json` and will be in the
 `cover_db` directory by default.
+
+Nearly all of the code in this distribution was simply copied from Pine
+Mizune's
+[Devel-Cover-Report-Codecov](https://metacpan.org/release/Devel-Cover-Report-Codecov)
+distribution.
 
 # UPLOADING RESULTS
 
