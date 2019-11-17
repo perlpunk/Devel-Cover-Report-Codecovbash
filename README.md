@@ -4,7 +4,7 @@ Devel::Cover::Report::Codecovbash - Generate a JSON file to be uploaded with the
 
 # VERSION
 
-version 0.02
+version 0.03
 
 # DESCRIPTION
 
@@ -25,7 +25,7 @@ distribution.
 Use the codecov bash script:
 
     cover -report codecovbash
-    bash < (curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
+    bash <(curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
 
 # SUPPORT
 
