@@ -109,6 +109,11 @@ L<https://docs.codecov.io/docs/about-the-codecov-bash-uploader> for details.
 The generated file will be named F<codecov.json> and will be in the
 F<cover_db> directory by default.
 
+Nearly all of the code in this distribution was simply copied from Pine
+Mizune's
+L<Devel-Cover-Report-Codecov|https://metacpan.org/release/Devel-Cover-Report-Codecov>
+distribution.
+
 =head1 UPLOADING RESULTS
 
 Use the codecov bash script:
