@@ -119,4 +119,4 @@ distribution.
 Use the codecov bash script:
 
     cover -report codecovbash
-    bash < (curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
+    bash <(curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
