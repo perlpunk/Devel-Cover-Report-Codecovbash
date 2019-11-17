@@ -12,7 +12,7 @@ use namespace::autoclean;
 use File::Spec;
 use JSON::MaybeXS qw( encode_json );
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 sub report {
     shift;
