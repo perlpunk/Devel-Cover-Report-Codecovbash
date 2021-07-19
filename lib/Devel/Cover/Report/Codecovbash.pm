@@ -90,7 +90,7 @@ sub _get_line_coverage {
         if $branch && !$branch->[0]->error;
     return $branch->[0]->covered . '/' . $branch->[0]->total if $branch;
     return $statement unless $statement;
-    return if $statement->[0]->uncoverable;
+    return undef if $statement->[0]->uncoverable;
     return $statement->[0]->covered;
 }
 
