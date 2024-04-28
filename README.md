@@ -27,10 +27,6 @@ Use the codecov bash script:
     cover -report codecovbash
     bash <(curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
 
-# SUPPORT
-
-I am also usually active on IRC as 'autarch' on `irc://irc.perl.org`.
-
 # SOURCE
 
 The source code repository for Devel-Cover-Report-Codecovbash can be found at [https://github.com/perlpunk/Devel-Cover-Report-Codecovbash](https://github.com/perlpunk/Devel-Cover-Report-Codecovbash).
