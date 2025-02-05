@@ -47,6 +47,10 @@ sub _get_file_coverage {
     my @coverage   = (undef);
 
     for my $i ( 1 .. $lines ) {
+        unless (defined $statements) {
+            push @coverage, undef;
+            next;
+        }
         my $statement = $statements->location($i);
         my $branch    = defined $branches ? $branches->location($i) : undef;
         push @coverage, _get_line_coverage( $statement, $branch );
