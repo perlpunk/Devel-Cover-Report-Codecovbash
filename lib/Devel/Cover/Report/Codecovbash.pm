@@ -12,7 +12,7 @@ use namespace::autoclean;
 use File::Spec;
 use JSON::MaybeXS qw( encode_json );
 
-our $VERSION = '0.04';
+our $VERSION = '0'; # VERSION
 
 sub report {
     shift;
@@ -124,3 +124,41 @@ Use the codecov bash script:
 
     cover -report codecovbash
     bash <(curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
+
+=head1 SOURCE
+
+The source code repository for Devel-Cover-Report-Codecovbash can be found at
+L<https://github.com/perlpunk/Devel-Cover-Report-Codecovbash>.
+
+=head1 AUTHOR
+
+Tina Müller <tinita@cpan.org>
+
+=head1 CONTRIBUTORS
+
+=for stopwords Dave Rolsky Tina Müller
+
+=over 4
+
+=item *
+
+Dave Rolsky <autarch@urth.org>
+
+=item *
+
+Tina Müller <cpan2@tinita.de>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2019 - 2021 by Pine Mizune.
+
+This is free software, licensed under:
+
+  The MIT (X11) License
+
+The full text of the license can be found in the
+F<LICENSE> file included with this distribution.
+
+=cut

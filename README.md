@@ -2,10 +2,6 @@
 
 Devel::Cover::Report::Codecovbash - Generate a JSON file to be uploaded with the codecov bash script.
 
-# VERSION
-
-version 0.04
-
 # DESCRIPTION
 
 This is a coverage reporter for Codecov. It generates a JSON file that can be
@@ -42,7 +38,7 @@ Tina Müller <tinita@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2019 - 2021 by Pine Mizune.
+This software is Copyright (c) 2019 - 2025 by Pine Mizune.
 
 This is free software, licensed under:
 
