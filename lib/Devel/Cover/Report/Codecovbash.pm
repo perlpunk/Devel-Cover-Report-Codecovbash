@@ -95,7 +95,11 @@ sub _get_line_coverage {
     return $branch->[0]->covered . '/' . $branch->[0]->total if $branch;
     return $statement unless $statement;
     return undef if $statement->[0]->uncoverable;
-    return $statement->[0]->covered;
+    # In some cases it can happen that the first statement on the line is
+    # reported as uncovered and the second as covered. In this case we want
+    # to report the line as covered as well.
+    my ($covered) = grep { $_->covered } @$statement;
+    return ($covered || $statement->[0])->covered;
 }
 
 1;
