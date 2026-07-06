@@ -108,6 +108,10 @@ sub _get_line_coverage {
 
 __END__
 
+=head1 NAME
+
+Generate a JSON file to be uploaded with the codecov bash script.
+
 =head1 DESCRIPTION
 
 This is a coverage reporter for Codecov. It generates a JSON file that can be
