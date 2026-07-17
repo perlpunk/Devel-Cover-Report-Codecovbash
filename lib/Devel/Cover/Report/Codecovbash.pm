@@ -116,6 +116,10 @@ __END__
 
 =head1 NAME
 
+Devel::Cover::Report::Codecovbash
+
+=head1 ABSTRACT
+
 Generate a JSON file to be uploaded with the codecov bash script.
 
 =head1 DESCRIPTION
