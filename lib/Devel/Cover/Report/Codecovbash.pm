@@ -108,6 +108,8 @@ sub _get_line_coverage {
 
 __END__
 
+=encoding utf-8
+
 =head1 NAME
 
 Generate a JSON file to be uploaded with the codecov bash script.
