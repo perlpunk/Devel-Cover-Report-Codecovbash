@@ -98,8 +98,12 @@ sub _get_line_coverage {
     # In some cases it can happen that the first statement on the line is
     # reported as uncovered and the second as covered. In this case we want
     # to report the line as covered as well.
-    my ($covered) = grep { $_->covered } @$statement;
-    return ($covered || $statement->[0])->covered;
+    my @covered = grep { $_->covered } @$statement;
+    return 0 unless @covered;
+    if ($ENV{DEVEL_COVER_CODECOVBASH_COVER_ALL_STATEMENTS}) {
+        return @covered == @$statement ? 1 : 0;
+    }
+    return $covered[0]->covered;
 }
 
 1;
@@ -134,6 +138,27 @@ Use the codecov bash script:
 
     cover -report codecovbash
     bash <(curl -s https://codecov.io/bash) -t token -f cover_db/codecov.json
+
+=head1 CONFIGURATION
+
+=over
+
+=item C<DEVEL_COVER_CODECOVBASH_COVER_ALL_STATEMENTS>
+
+Since version v0.43
+
+Codecov measures line coverage, while L<Devel::Cover> returns statement
+coverage. So we have to decide if we want to count a line as covered if
+at least B<one> statement or B<all> statements in a line are covered.
+
+By default a line is reported as covered if at least one statement is covered.
+
+You can set C<DEVEL_COVER_CODECOVBASH_COVER_ALL_STATEMENTS> to true. Then
+all statements in a line must be covered.
+
+    DEVEL_COVER_CODECOVBASH_COVER_ALL_STATEMENTS=1 cover -report codecovbash
+
+=back
 
 =head1 SOURCE
 
