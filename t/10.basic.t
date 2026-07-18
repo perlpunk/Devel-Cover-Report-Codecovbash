@@ -10,6 +10,7 @@ use Devel::Cover::Report::Codecovbash;
 
 use FindBin '$Bin';
 my $datadir = "$Bin/data/cover_db";
+$ENV{DEVEL_COVER_DB_FORMAT} = 'JSON';
 
 my $db = Devel::Cover::DB->new(db => $datadir);
 my $file = 't/dummy';
